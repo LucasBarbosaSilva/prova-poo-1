@@ -4,17 +4,21 @@ public class ContaEspecial extends ContaCorrente{
     protected float saldo;
     private float limite;
 
-    public ContaEspecial(float saldo, float limite){
-        super(saldo);
+    public ContaEspecial(Cliente cliente, float saldo, float limite){
+        super(cliente, saldo);
         this.limite = limite;
     }
 
     @Override
     public boolean sacar(float valor){
-        if (valor <= (this.saldo + this.limite) && this.saldo >= (0 - this.limite)){
-            System.out.println("Saque no valor de R$" + valor + "efetuado.");
+       // if (valor <= (this.saldo + this.limite) && this.saldo >= (0 - this.limite)){
+        if (valor <= this.limite){
+            System.out.println("Cliente: " + this.getCliente().getNome());
+            System.out.println("Conta Especial");
+            System.out.println("Saque no valor de R$" + valor + " efetuado.");
             this.saldo = this.saldo - valor;
-            this.toString();
+            this.limite = this.limite - valor;
+            System.out.println(this.toString());
             return true;
         } else {
             System.out.println("Saque negado.");
