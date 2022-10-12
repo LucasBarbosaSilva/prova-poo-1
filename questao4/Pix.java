@@ -8,6 +8,6 @@ public class Pix implements Modulo{
     }
 
     public void pagar(double valor){
-        System.out.println("Valor de R$" + valor + " pago pelo PIX\nNúmero do PIX: " + this.chave_pix);  
+        System.out.println("Valor de R$" + valor + " pago pelo PIX\nChave do PIX: " + this.chave_pix);  
     }
 }
