@@ -44,7 +44,7 @@ public class ContaCorrente {
             //ContaEspecial precisaria de algum tratamento nesse caso?
 
             conta.setSaldo(conta.getSaldo() + valor);
-            this.toString();
+            System.out.println(this.toString());
             return true;
         } else {
             System.out.println("Cliente: " + this.getCliente().getNome());

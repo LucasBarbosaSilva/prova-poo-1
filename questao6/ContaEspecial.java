@@ -1,7 +1,6 @@
 package questao6;
 
 public class ContaEspecial extends ContaCorrente{
-    protected float saldo;
     private float limite;
 
     public ContaEspecial(Cliente cliente, float saldo, float limite){
@@ -11,13 +10,11 @@ public class ContaEspecial extends ContaCorrente{
 
     @Override
     public boolean sacar(float valor){
-       // if (valor <= (this.saldo + this.limite) && this.saldo >= (0 - this.limite)){
-        if (valor <= this.limite){
+       if (valor <= (this.saldo + this.limite)){
             System.out.println("Cliente: " + this.getCliente().getNome());
             System.out.println("Conta Especial");
             System.out.println("Saque no valor de R$" + valor + " efetuado.");
             this.saldo = this.saldo - valor;
-            this.limite = this.limite - valor;
             System.out.println(this.toString());
             return true;
         } else {
@@ -26,20 +23,6 @@ public class ContaEspecial extends ContaCorrente{
             return false;
         }
     }
-
-    //VERSÕES FOCADAS NO RETURN BOOLEAN
-
-    //@Override
-    //public boolean sacar(float valor){
-    //   if (valor <= this.limite){
-    //        this.saldo = this.saldo - valor;
-    //        this.limite = this.limite - valor;
-    //        return true;
-    //    } else {
-    //        return false;
-    //    }
-    //}
-
 
     @Override
     public String toString(){
