@@ -1,7 +1,5 @@
 package questao6;
 
-import javax.swing.SpringLayout;
-
 public class ContaCorrente {
     private Cliente cliente;
     protected float saldo;
@@ -55,6 +53,33 @@ public class ContaCorrente {
             return false;
         }
     }
+
+    //VERSÕES FOCADAS NO RETURN BOOLEAN
+    
+    //public void depositar(float valor){
+    //    this.saldo = this.saldo + valor;
+    //}
+
+    //protected boolean sacar(float valor){
+    //    if (valor <= this.saldo){
+    //        this.saldo = this.saldo - valor;
+    //        return true;
+    //    } else {
+    //        return false;
+    //    }
+    //}
+
+    //public boolean transferir(ContaCorrente conta, float valor){
+    //    if (valor <= this.saldo){
+    //        this.saldo = this.saldo - valor;
+    //        conta.depositar(valor);
+    //        return true;
+    //    } else {
+    //        return false;
+    //    }
+    //}
+    
+
 
     @Override
     public String toString(){

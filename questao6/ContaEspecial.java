@@ -27,6 +27,20 @@ public class ContaEspecial extends ContaCorrente{
         }
     }
 
+    //VERSÕES FOCADAS NO RETURN BOOLEAN
+
+    //@Override
+    //public boolean sacar(float valor){
+    //   if (valor <= this.limite){
+    //        this.saldo = this.saldo - valor;
+    //        this.limite = this.limite - valor;
+    //        return true;
+    //    } else {
+    //        return false;
+    //    }
+    //}
+
+
     @Override
     public String toString(){
         return "Saldo atual da conta: R$" + this.saldo + "\nLimite disponível: " + this.limite;
